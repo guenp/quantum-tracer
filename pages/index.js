@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import {useState} from 'react';
 import { useRouter } from 'next/router';
+import { basePath } from '../next.config';
 
 export default function Home() {
   const router = useRouter()
@@ -15,7 +16,7 @@ export default function Home() {
 
   const parseGistUrl = preventDefault (() => {
     if (url != undefined) {
-      router.push({pathname: "gist/" + url.replace("https://gist.github.com/", "")});
+      router.push({pathname: basePath + "/../gist/" + url.replace("https://gist.github.com/", "")});
     }
   })
 
