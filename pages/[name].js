@@ -9,7 +9,7 @@ export default function Gists() {
     const gists = fetchAllGists(name);
     return (
         <Layout>
-            Hi {name}!
+            {name}'s gists:
             <div>{gists}</div>
         </Layout>
     )

@@ -10,7 +10,7 @@ export default function Files() {
     if (router.isReady) {
         return (
             <Layout>
-                Hi {id[0]}!
+                {id[0]}'s quantum program {id[1]}
                 <div id="qvizid"></div>
                 {files}
             </Layout>
