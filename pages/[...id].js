@@ -1,6 +1,5 @@
 import Layout from '../components/layout'
 import { fetchAllFiles } from '../lib/github'
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 
