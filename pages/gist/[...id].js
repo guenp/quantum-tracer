@@ -1,5 +1,5 @@
-import Layout from '../components/layout'
-import { fetchAllFiles } from '../lib/github'
+import Layout from '../../components/layout'
+import { fetchAllFiles } from '../../lib/github'
 import { useRouter } from 'next/router'
 
 

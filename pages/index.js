@@ -15,7 +15,7 @@ export default function Home() {
 
   const parseGistUrl = preventDefault (() => {
     if (url != undefined) {
-      router.push({pathname: url.replace("https://gist.github.com/", "")});
+      router.push({pathname: "gist/" + url.replace("https://gist.github.com/", "")});
     }
   })
 
