@@ -1,4 +1,7 @@
-// Replace `nextjs-github-pages` with your Github repo project name.
 const isProd = process.env.NODE_ENV === 'production'
 
-export const assetPrefix = isProd ? '/quantum-tracer/' : ''
+module.exports = {
+  // Use the prefix in production and not development.
+  assetPrefix: isProd ? '/quantum-tracer/' : '',
+  basePath: isProd ? 'https://guenp.github.io/quantum-tracer/': ''
+}
