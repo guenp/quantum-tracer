@@ -7,22 +7,16 @@ import { useRouter } from 'next/router'
 export default function Files() {
     const router = useRouter();
     const {id} = router.query;
-    
-    useEffect(() => {
-        console.log('ID')
-        console.log(id)
-      }, [])
-
-    if (!router.isReady) return <div>loading...</div>
-    else {
-        const name = id[0];
-        const gistId = id[1];
-        const files = fetchAllFiles(gistId);
+    const files = fetchAllFiles(id);
+    if (router.isReady) {
         return (
             <Layout>
-                Hi {name}!
-                {/* {files} */}
+                Hi {id[0]}!
+                <div id="qvizid"></div>
+                {files}
             </Layout>
         )
+    } else {
+        return <div>loading...</div>
     }
 }

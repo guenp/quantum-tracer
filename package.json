@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@microsoft/quantum-viz.js": "^1.0.2",
     "next": "^11.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
