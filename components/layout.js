@@ -22,7 +22,7 @@ export default function Layout({ children, home }) {
           rel="noopener noreferrer"
         >
           {' '}
-          <img src="quantum-tracer/quantum.png" alt="Microsoft Azure Quantum" className={styles.logo} />
+          <img src="https://raw.githubusercontent.com/guenp/quantum-tracer/main/public/quantum.png" alt="Microsoft Azure Quantum" className={styles.logo} />
         </a>
       </div>
     </div>
