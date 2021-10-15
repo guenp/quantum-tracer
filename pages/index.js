@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import {useState} from 'react';
 import { useRouter } from 'next/router';
 import { basePath } from '../next.config';
+import Grid from '../components/grid'
 
 export default function Home() {
   const router = useRouter()
@@ -44,9 +45,10 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+        <h1>Quantum Tracer</h1>
         <form onSubmit={parseGistUrl}>
           <input 
-            placeholder="Gist URL or username"
+            placeholder="Enter GitHub gist URL or username"
             className="input" 
             id="url" 
             name="url"
@@ -55,6 +57,9 @@ export default function Home() {
             }
           />
         </form>
+      </section>
+      <section>
+        <Grid username="guenp" />
       </section>
     </Layout>
   )

@@ -44,6 +44,10 @@ img {
   user-select: none;
 }
 
+.input {
+  text-align: center;
+}
+
 .fieldset,
 .input,
 .textarea,
