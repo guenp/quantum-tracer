@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { basePath } from '../next.config'
 import styles from './layout.module.css'
 
 export const siteTitle = 'Quantum Tracer'
@@ -8,7 +9,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         <title>{siteTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={basePath + "/favicon.ico"} />
       </Head>
 
       <div className={styles.main}>

@@ -8,17 +8,30 @@ import { basePath } from '../next.config';
 export default function Home() {
   const router = useRouter()
   const [url, setUrl] = useState();
+  const [username, setUsername] = useState();
 
   const preventDefault = f => e => {
     e.preventDefault()
     f(e)
   }
 
+  const routeGistUrl = (url) => {
+    router.push({pathname: basePath + "/../gist/" + url.replace("https://gist.github.com/", "")});
+  }
+
   const parseGistUrl = preventDefault (() => {
     if (url != undefined) {
-      router.push({pathname: basePath + "/../gist/" + url.replace("https://gist.github.com/", "")});
+      routeGistUrl(url);
     }
   })
+
+  if (router.query.url != undefined) {
+    routeGistUrl(router.query.url);
+  }
+
+  if (router.query.username != undefined) {
+    routeGistUrl(router.query.username);
+  }
 
   return (
     <Layout home>
