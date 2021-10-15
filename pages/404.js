@@ -5,14 +5,20 @@ import { basePath } from "../next.config";
 export default function Custom404() {
     const router = useRouter();
 
-    if ("/quantum-tracer" == router.basePath) {
-        // useEffect(() => {
-        //     router.push({pathname: "/gist/" + router.asPath});
-        // });
-        console.log("PATH:");
-        console.log(router.basePath);
-        console.log(router.asPath);
-        return (<div>loading...</div>)
+    if ("/quantum-tracer" == router.basePath & !router.asPath.includes("gist")) {
+        useEffect(() => {
+            router.push({pathname: "/gist/" + router.asPath});
+        });
+        return (
+            <div className="loading">
+                loading gist...
+            <style jsx>{`
+            .loading {
+                padding: 50px;
+            }
+            `}</style>
+            </div>
+        )
     } else {
 
         return (
@@ -28,7 +34,9 @@ export default function Custom404() {
                 </div>
                 </div>
                 <style jsx>{`
-                    body { margin: 0 }
+                    body {
+                        margin: 0
+                    }
                     .container {
                         color:#000;
                         background:#fff;
@@ -63,7 +71,6 @@ export default function Custom404() {
                         line-height:49px;
                         height:49px;
                         vertical-align:middle
-                    }
                     }
                 `}</style>
             </div>

@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 const showGists = (name, gists) => {
     return (
         <Layout>
-            {name}'s gists:
+            <div className="title"><a href={"https://gist.github.com/" + name} target="_blank">{name}</a>'s gists:</div>
             <div>{gists}</div>
         </Layout>
     )

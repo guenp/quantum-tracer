@@ -19,6 +19,15 @@ export default function Files() {
     if (router.isReady) {
         return showGistContents(id[0], id[1], files);
     } else {
-        return <div>loading...</div>
+        return (
+            <div className="loading">
+                loading gist...
+            <style jsx>{`
+            .loading {
+                padding: 50px;
+            }
+            `}</style>
+            </div>
+        )
     }
 }
