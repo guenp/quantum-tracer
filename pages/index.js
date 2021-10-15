@@ -16,7 +16,13 @@ export default function Home() {
   }
 
   const routeGistUrl = (url) => {
-    router.push({pathname: basePath + "/../gist/" + url.replace("https://gist.github.com/", "")});
+    if (!url.includes("http")) {
+      router.push({pathname: basePath + "/../gist/" + url});
+    } else {
+      const urlObj = new URL(url);
+      const path = urlObj.pathname;
+      router.push({pathname: basePath + "/../gist" + path});
+    }
   }
 
   const parseGistUrl = preventDefault (() => {
