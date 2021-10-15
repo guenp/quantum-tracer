@@ -7,8 +7,9 @@ export default function Custom404() {
     console.log(router);
 
     if ("/quantum-tracer" == router.basePath) {
+        const gistPath = router.asPath.startsWith("/gist") ? "" : "/gist";
         useEffect(() => {
-            router.push({pathname: "/gist/" + router.asPath});
+            router.push({pathname: gistPath + router.asPath});
         });
         return (
             <div className="loading">
