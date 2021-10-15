@@ -8,7 +8,6 @@ import { basePath } from '../next.config';
 export default function Home() {
   const router = useRouter()
   const [url, setUrl] = useState();
-  const [username, setUsername] = useState();
 
   const preventDefault = f => e => {
     e.preventDefault()
