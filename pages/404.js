@@ -5,7 +5,7 @@ import { basePath } from "../next.config";
 export default function Custom404() {
     const router = useRouter();
 
-    if ("/quantum-tracer" == router.basePath & !router.asPath.includes("gist")) {
+    if ("/quantum-tracer" == router.basePath) {
         useEffect(() => {
             router.push({pathname: "/gist/" + router.asPath});
         });
