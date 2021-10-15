@@ -1,10 +1,8 @@
 import { useRouter } from "next/router"
 import { useEffect } from "react";
-import { basePath } from "../next.config";
 
 export default function Custom404() {
     const router = useRouter();
-    console.log(router);
 
     if ("/quantum-tracer" == router.basePath) {
         const gistPath = router.asPath.startsWith("/gist") ? "" : "/gist";

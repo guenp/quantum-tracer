@@ -167,3 +167,22 @@ img {
 .title {
   line-height: 4rem;
 }
+
+.title pre {
+  display: inline
+}
+
+.title pre a {
+  color: #000;
+  text-decoration: none;
+}
+
+.title pre a:hover {
+  text-decoration: underline;
+}
+
+.trace {
+	overflow : scroll;
+  width: calc(100% - 100px);
+  text-align: center;
+}

@@ -1,12 +1,18 @@
 import Layout from '../../components/layout'
 import { fetchAllFiles } from '../../lib/github'
 import { useRouter } from 'next/router'
+import { basePath } from '../../next.config'
 
 const showGistContents = (name, gistId, files) => {
     return (
         <Layout>
-            {name}'s quantum program {gistId}
-            <div id="qvizid"></div>
+            <div className="title">
+                <a href={basePath + "/gist/" + name}>{name}</a>'s gist:
+                <pre>
+                    <a href={"https://gist.github.com/" + name + "/" + gistId}>{gistId}</a>
+                </pre>
+            </div>
+            <div id="quantum-viz" className="trace"></div>
             {files}
         </Layout>
     )

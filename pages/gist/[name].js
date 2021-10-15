@@ -11,7 +11,6 @@ const showGists = (name, gists) => {
     )
 }
 
-
 export default function Gists() {
     const router = useRouter();
     const {name} = router.query;
