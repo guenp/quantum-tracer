@@ -18,8 +18,7 @@ export default function Layout({ children, home }) {
 
       <div className={styles.footer}>
         <a
-          href="https://microsoft.com/quantum"
-          target="_blank"
+          href={basePath}
           rel="noopener noreferrer"
         >
           {' '}
